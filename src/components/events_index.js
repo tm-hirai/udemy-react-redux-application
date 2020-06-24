@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 import { readEvents } from '../actions';
 
@@ -32,16 +33,13 @@ class EventsIndex extends React.Component {
             {this.renderEvents()}
           </tbody>
         </table>
+        <Link to="/events/new">New Events</Link>
       </React.Fragment>
     )
   }
 }
 
 const mapStateToProps = state => ({ events: state.events });
-// const mapDispatchToProps = dispatch => ({
-//   increment: () => dispatch(increment()),
-//   decrement: () => dispatch(decrement())
-// })
 
 const mapDispatchToProps = ({ readEvents });
 export default connect(mapStateToProps, mapDispatchToProps)(EventsIndex);
