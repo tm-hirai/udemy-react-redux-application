@@ -25,22 +25,14 @@ class EventsNew extends React.Component {
     this.props.history.push('/');
   }
   render() {
-<<<<<<< HEAD
     const { handleSubmit, pristine, submitting, invalid } = this.props;
-=======
-    const { handleSubmit, pristine, submitting } = this.props;
->>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
 
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
         <div><Field label="Title" name="title" type="text" component={this.renderField} /></div>
         <div><Field label="Body" name="body" type="text" component={this.renderField} /></div>
         <div>
-<<<<<<< HEAD
           <input type="submit" value="Submit" disabled={pristine || submitting || invalid} />
-=======
-          <input type="submit" value="Submit" disabled={pristine || submitting} />
->>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
           <Link to="/">Cancel</Link>
         </div>
       </form>

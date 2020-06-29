@@ -1,20 +1,10 @@
 import _ from 'lodash'
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
   CREATE_EVENT,
   READ_EVENT,
   READ_EVENTS,
   DELETE_EVENTS,
   UPDATE_EVENT
-=======
-  READ_EVENTS,
-  DELETE_EVENTS
->>>>>>> db41f58... implement delete feature
-=======
-  READ_EVENTS,
-  DELETE_EVENTS
->>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
 } from '../actions';
 
 export default (events = {}, action) => {
