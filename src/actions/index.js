@@ -1,11 +1,16 @@
 import axios from 'axios'
 
 export const READ_EVENTS = 'READ_EVENTS'
+<<<<<<< HEAD
 export const READ_EVENT = 'READ_EVENT'
 export const CREATE_EVENT = 'CREATE_EVENT'
 export const UPDATE_EVENT = 'UPDATE_EVENT';
 export const DELETE_EVENTS = 'DELETE_EVENTS'
 
+=======
+export const CREATE_EVENTS = 'CREATE_EVENTS'
+export const DELETE_EVENTS = 'DELETE_EVENTS'
+>>>>>>> db41f58... implement delete feature
 
 const ROOT_URL = 'http://udemy-utils.herokuapp.com/api/v1';
 const QUERYSTRING = '?token=token123';
@@ -32,5 +37,10 @@ export const getEvent = id => async dispatch => {
 }
 export const deleteEvent = id => async dispatch => {
   await axios.delete(`${ROOT_URL}/events/${id}${QUERYSTRING}`);
+  dispatch({ type: DELETE_EVENTS, id })
+}
+
+export const deleteEvent = id => async dispatch => {
+  await axios.delete(`${ROOT_URL}/events/${id}/${QUERYSTRING}`);
   dispatch({ type: DELETE_EVENTS, id })
 }
