@@ -12,6 +12,7 @@ class EventsShow extends React.Component {
     this.onDeleteClick = this.onDeleteClick.bind(this);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   componentDidMount() {
     const { id } = this.props.match.params;
@@ -19,6 +20,8 @@ class EventsShow extends React.Component {
   }
 =======
 >>>>>>> db41f58... implement delete feature
+=======
+>>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
   renderField(field) {
     const { input, label, type, meta: { touched, error } } = field;
     return (
@@ -36,18 +39,24 @@ class EventsShow extends React.Component {
 
   async onSubmit(values) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     await this.props.putEvent(values);
     this.props.history.push('/');
   }
   render() {
     const { handleSubmit, pristine, submitting, invalid } = this.props;
 =======
+=======
+>>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
     // await this.props.postEvent(values);
     this.props.history.push('/');
   }
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
+<<<<<<< HEAD
 >>>>>>> db41f58... implement delete feature
+=======
+>>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
 
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
@@ -55,10 +64,14 @@ class EventsShow extends React.Component {
         <div><Field label="Body" name="body" type="text" component={this.renderField} /></div>
         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <input type="submit" value="Submit" disabled={pristine || submitting || invalid} />
 =======
           <input type="submit" value="Submit" disabled={pristine || submitting} />
 >>>>>>> db41f58... implement delete feature
+=======
+          <input type="submit" value="Submit" disabled={pristine || submitting} />
+>>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
           <Link to="/">Cancel</Link>
           <Link to="/" onClick={this.onDeleteClick}>Delete</Link>
         </div>
@@ -74,6 +87,7 @@ const validate = values => {
   return errors;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 const mapStateToProps = (state, ownProps) => {
   const event = state.events[ownProps.match.params.id];
   return { initialValues: event, event };
@@ -86,4 +100,9 @@ const mapDispatchToProps = ({ deleteEvent });
 export default connect(null, mapDispatchToProps)(
   reduxForm({ validate, form: 'eventShowForm' })(EventsShow)
 >>>>>>> db41f58... implement delete feature
+=======
+const mapDispatchToProps = ({ deleteEvent });
+export default connect(null, mapDispatchToProps)(
+  reduxForm({ validate, form: 'eventShowForm' })(EventsShow)
+>>>>>>> db41f589a8b79d894f0a1143cd01aaca23084ad1
 )
